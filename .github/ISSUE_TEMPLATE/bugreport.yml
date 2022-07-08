@@ -1,0 +1,70 @@
+name: Bug Report
+description: File a bug report for an issue observed on one of the Volla Phone models
+body:
+  - id: verified
+    type: dropdown
+    attributes:
+      label: Is this a new report?
+      description: I verified that there isn't already an open issue for this bug
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - id: device
+    type: dropdown
+    attributes:
+      label: Device model
+      description: Which Volla Phone model was this issue observed on
+      options:
+        - "Volla Phone 22 (2022)"
+        - "Volla Phone X (2021)"
+        - "Volla Phone (2020)"
+    validations:
+      required: true
+  - id: osver
+    type: input
+    attributes:
+      label: OS version
+      description: Version of Ubuntu Youch you are reporting this issue against; you can find this in `System Settings` > `About`
+      placeholder: 16.04 (OTA-23), 16.04 (2022-W27) or 16.04 (2022-07-09)
+    validations:
+      required: true
+  - id: description
+    type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: Clicking on this button in System Settings doesn't...
+    validations:
+      required: true
+  - id: steps
+    type: textarea
+    attributes:
+      label: Steps to reproduce the bug
+      description: Clear steps to reproduce the bug
+      placeholder: |
+        1. Go to '...'
+        2. Scroll down to '...'
+        3. Click on '...'
+        4. See error
+    validations:
+      required: true
+  - id: expected
+    type: textarea
+    attributes:
+      label: Expected behaviour
+      description: A clear and concise description of what you expected to happen
+      placeholder: The button is supposed to do this thing.
+    validations:
+      required: true
+  - id: extra
+    type: textarea
+    attributes:
+      label: Additional context
+      description: |
+        In case you for example have screenshots or log files to attach, add them here!
+
+        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
